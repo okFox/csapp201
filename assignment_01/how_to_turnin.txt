@@ -1,0 +1,31 @@
+----------------------------------------------------------------------
+IMPORTANT
+----------------------------------------------------------------------
+
+Do not turn in this assignment on D2L. Instead use the 'turnin' program. The
+instructions for using the 'turnin' program are found here:
+~mike.noel/classes/all/turnin.txt.
+
+----------------------------------------------------------------------
+What to turn in
+----------------------------------------------------------------------
+
+For this assignment you will turnin the four C source code files, including
+your answers as comments in the files. Use tar to bundle the four files
+together then turn in that tar bundle. If you don't remember how to use tar,
+you can use the following comment to create the tar bundle. This assumes that
+you are in the directory that contains your C files.
+
+tar cvf assignment01.tar payroll.c bitwise.c mixed.c typecast.c
+
+After running this tar command you will use 'turnin' to submit
+assignment01.tar.
+
+
+
+
+
+
+
+
+
