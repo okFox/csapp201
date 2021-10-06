@@ -2,6 +2,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 
 
 const int SIZE = 100;
@@ -28,17 +29,27 @@ void printPayroll(Employee list[], int count) //does list need to be a []?
 
 void createPayroll(Employee list[], int count)
 {
+    // int tempCount = 0;
+    // printf("this is tempCount now %d \n", tempCount);
+    // printf("this is *count %d \n", count);
     printf("how many employees?\n");
-    scanf("%d", count);
+    scanf("%d", &count);
+    //printf("this is tempCount now %d \n", tempCount);
+    //*count = tempCount;
     
     for(int i=0; i < count; i++)
     {
 	char tname[100];
-	printf("For employee %d", i+1);
-	printf("last name? ");
-	scanf("%c", list[i].last_name);
-	printf("pay rate? ");
-	scanf("%lf", list[i].pay_rate);
+
+	printf("For employee %d \n", i+1);
+	
+    printf("last name? ");
+	scanf("%d", tname);
+	strcpy(list[i].last_name, tname);
+
+
+    printf("pay rate? ");
+	scanf("%lf", &list[i].pay_rate);
     }
     
 }
