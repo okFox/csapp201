@@ -13,47 +13,41 @@ typedef struct
     double pay_rate;
 }Employee;
 
-void printPayroll(Employee list[], int count) //does list need to be a []?
+void printPayroll(Employee list[], int count)
 {
-    printf("*** PAYROLL ***\n");
 
+    printf("*** PAYROLL ***\n");
+    // printf("count: %p\n", count);
+    // printf("countER: %p\n", counter);
     for(int i = 0; i < count; i++)
     {
-
-        //pointer because it's char array?
-	printf("Last Name: %c \n", *list[i].last_name);  
-    printf("Pay Rate: %lf \n", list[i].pay_rate);
+	printf("Last Name: %s\n", list[i].last_name);  
+    printf("Pay Rate: %lf\n", list[i].pay_rate);
 
     }
 }
 
 void createPayroll(Employee list[], int count)
 {
-    // int tempCount = 0;
-    // printf("this is tempCount now %d \n", tempCount);
-    // printf("this is *count %d \n", count);
+    
     printf("how many employees?\n");
     scanf("%d", &count);
-    //printf("this is tempCount now %d \n", tempCount);
-    //*count = tempCount;
-    
+    printf("count is now: %d\n", count);
+
     char tname[100];
     for(int i=0; i < count; i++)
     {
-	
-
 	printf("For employee %d \n", i+1);
 	
     printf("last name? ");
 	scanf("%s", tname);
     strcpy(list[i].last_name, tname);
 
-    // printf("lastname? %s \n", list[i].last_name);
-
     printf("pay rate? ");
 	scanf("%lf", &list[i].pay_rate);
     }
-    
+    printf("count is STILL: %d\n", count);
+    // return;
 }
 
 int main()
@@ -62,7 +56,7 @@ int main()
     int count = 0;
     
     createPayroll(list, count);
-    
+    printf("count in main: %d\n", count);
     printPayroll(list, count);
       
     return 0;
