@@ -37,19 +37,22 @@ void createPayroll(Employee list[], int count)
     //printf("this is tempCount now %d \n", tempCount);
     //*count = tempCount;
     
+    char tname[100];
     for(int i=0; i < count; i++)
     {
-	char tname[100];
+	
 
 	printf("For employee %d \n", i+1);
 	
     printf("last name? ");
-	scanf("%d", tname);
-	strcpy(list[i].last_name, tname);
+	scanf("%s", tname);
+    printf("Tname>>> %s", tname);
+    strcpy(list[i].last_name, tname);
 
+    printf("lastname? %s", list[i].last_name);
 
     printf("pay rate? ");
-	scanf("%lf", &list[i].pay_rate);
+	scanf("%lf\n", &list[i].pay_rate);
     }
     
 }
