@@ -9,11 +9,11 @@ const int SIZE = 100;
 
 typedef struct 
 {
-    char last_name[SIZE];
+    char last_name[100];
     double pay_rate;
 }Employee;
 
-void printPayroll(Employee list[], int *count)
+void printPayroll(Employee list[], int count)
 {
 
     printf("*** PAYROLL ***\n");
