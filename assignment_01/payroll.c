@@ -13,11 +13,11 @@ typedef struct
     double pay_rate;
 }Employee;
 
-void printPayroll(Employee list[], int count)
+void printPayroll(Employee list[], int *count)
 {
 
     printf("*** PAYROLL ***\n");
-    // printf("count: %p\n", count);
+    printf("count: %p\n", count);
     // printf("countER: %p\n", counter);
     for(int i = 0; i < count; i++)
     {
@@ -27,15 +27,17 @@ void printPayroll(Employee list[], int count)
     }
 }
 
-void createPayroll(Employee list[], int count)
+void createPayroll(Employee list[], int *count)
 {
-    
+    // int tempCount = 0;
     printf("how many employees?\n");
-    scanf("%d", &count);
-    printf("count is now: %d\n", count);
+    scanf("%d", count);
+
+    // count = tempCount;
+    printf(">>>>count is now: %d\n", *count);
 
     char tname[100];
-    for(int i=0; i < count; i++)
+    for(int i=0; i < *count; i++)
     {
 	printf("For employee %d \n", i+1);
 	
@@ -46,7 +48,8 @@ void createPayroll(Employee list[], int count)
     printf("pay rate? ");
 	scanf("%lf", &list[i].pay_rate);
     }
-    printf("count is STILL: %d\n", count);
+    // count = tempCount;
+    printf("count is NOW: %d\n", count);
     // return;
 }
 
@@ -54,9 +57,16 @@ int main()
 {
     Employee list[SIZE];
     int count = 0;
+    // int *countPtr = &count;
+
     
-    createPayroll(list, count);
-    printf("count in main: %d\n", count);
+    createPayroll(list, &count);
+
+    printf("count in main: %d", count);
+    // printf("countptr in main: %d\n", countPtr);
+
+    printf("list.name: %s\n", list[1].last_name);
+
     printPayroll(list, count);
       
     return 0;
