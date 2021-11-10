@@ -1,6 +1,37 @@
 /*  assignment 1 part D
  * PUT YOUR NAME AND ANSWERS HERE
- *  
+ * ---------------------
+ *  Sarah Mayfield
+ *  1000:
+ ->unsigned int: 1000 ==> same, within range of unsigned int
+ ->unsigned char (as decimal) 232 ==>
+ ->char (as decimal) -24
+ ->unsigned long: 1000 ==> same, within range of unsigned int
+ ->long: 1000 ==> same, within range of unsigned int
+
+
+ -1000 :
+ ->unsigned int: 4294966296 ==> overflows to become umax of unsigned int (32bits)
+ ->unsigned char (as decimal) 24
+ ->char (as decimal) 24
+ ->unsigned long: 18446744073709550616 ==>overflows to become umax of unsigned long (64bits)
+ ->long: -1000 ==>same, within range of unsigned int
+
+
+ 100 :
+ ->unsigned int: 100
+ ->unsigned char (as decimal) 100
+ ->char (as decimal) 100
+ ->unsigned long: 100
+ ->long: 100
+
+
+ -100 :
+ ->unsigned int: 4294967196 ==> overflows to become umax of unsigned int (32bits)
+ ->unsigned char (as decimal) 156
+ ->char (as decimal) -100
+ ->unsigned long: 18446744073709551516 ==>overflows to become umax of unsigned long (64bits)
+ ->long: - ==>same, within range of (signed) long
  * 
  */ 
 

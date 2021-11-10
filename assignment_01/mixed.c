@@ -4,7 +4,13 @@
  * 
  * Explain the output of the following
  * values: 20, -20, 200, -200
- * 
+ * ----------
+ in order to compare 2 numbers they must be of the same type.  If an unsigned 
+ and a signed number are compared the signed number is implicitly type cast to unsigned.  
+ Unsigned's minimum is 0.  So the signed number is converted to unsigned.  
+ If the signed number being converted is negative, 
+ the compiler will at the int's MAX_RANGE + 1 (multiple times if necessary).  
+ This makes the converted number very big. This is why -20 and -200 show up as greater than 100.
  * 
  * Then fix the function to work correctly.
  * NOTE: ONLY change the function.
